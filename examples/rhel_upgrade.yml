@@ -1,0 +1,18 @@
+---
+- name: "Upgrade RHEL7 to RHEL8"
+  hosts: node3
+  vars:
+    reboot_connect_timeout: 5
+    reboot_post_reboot_delay: 15
+    reboot_timeout: 600
+  tasks:
+    - name: Upgrade Family OS
+      yum:
+        name: '*'
+        state: latest
+        when: ansible_os_family == "RedHat"
+
+    - name: Reboot host
+      reboot:
+        connect_timeout: "{{ reboot_connect_timeout }}"
+        post_reboot_delay: "{{ reboot_post_reboot_delay }}"
