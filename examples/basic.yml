@@ -1,6 +1,6 @@
 ---
 - name: Run role with minimal parameters
-  hosts: localhost
+  hosts: node2
   vars:
     postgresql_version: "10"
   roles:
