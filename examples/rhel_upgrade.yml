@@ -1,6 +1,6 @@
 ---
 - name: "Upgrade RHEL7 to RHEL8"
-  hosts: node3.example.com
+  hosts: node4.example.com
   vars:
     reboot_connect_timeout: 5
     reboot_post_reboot_delay: 15
