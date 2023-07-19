@@ -1,0 +1,9 @@
+---
+roles:
+  - name: infra.leapp
+    version: 1.0.1
+
+collections:
+  # Install a collection from Ansible Galaxy.
+  - name: infra.leapp.analysis
+    version: 1.0.1
